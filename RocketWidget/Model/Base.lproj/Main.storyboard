@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -32,12 +35,6 @@
                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Show All" id="Kd2-mp-pUS">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
@@ -101,13 +98,11 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Рокет виджет" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="RocketWidget" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="460" height="289"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="480" height="289"/>
-                        <value key="maxSize" type="size" width="480" height="289"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -300,11 +295,15 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="0lk-Xm-hlL">
+                                <rect key="frame" x="419" y="249" width="16" height="16"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="kZt-5J-I3r" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="1bL-kg-rCX"/>
                             <constraint firstItem="WNQ-4B-6fy" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="3hP-dC-e8I"/>
                             <constraint firstItem="Rbd-zz-Qx8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="4fg-mG-bgD"/>
+                            <constraint firstItem="0lk-Xm-hlL" firstAttribute="centerX" secondItem="2gK-zU-kG2" secondAttribute="centerX" id="5wR-Ks-uxI"/>
                             <constraint firstItem="msJ-Xq-nxD" firstAttribute="top" secondItem="lwR-EH-3wz" secondAttribute="bottom" constant="7" id="7Q1-hX-VSv"/>
                             <constraint firstAttribute="trailing" secondItem="QV6-c0-abG" secondAttribute="trailing" constant="20" id="9YW-yr-5Gu"/>
                             <constraint firstAttribute="trailing" secondItem="nUG-dy-mHL" secondAttribute="trailing" constant="20" id="9zB-sO-Po4"/>
@@ -320,6 +319,7 @@
                             <constraint firstItem="lwR-EH-3wz" firstAttribute="leading" secondItem="Rbd-zz-Qx8" secondAttribute="trailing" constant="14" id="VWh-MM-daq"/>
                             <constraint firstItem="nUG-dy-mHL" firstAttribute="top" secondItem="vjd-XM-2F6" secondAttribute="bottom" constant="8" id="Vbc-2I-t6i"/>
                             <constraint firstItem="vTZ-Vc-19g" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="ZJ0-9B-4Ir"/>
+                            <constraint firstItem="0lk-Xm-hlL" firstAttribute="centerY" secondItem="2gK-zU-kG2" secondAttribute="centerY" id="bo2-i0-zXL"/>
                             <constraint firstItem="Rbd-zz-Qx8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="cf3-I6-ex8"/>
                             <constraint firstItem="2gK-zU-kG2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fwT-Hu-vMM"/>
                             <constraint firstAttribute="trailing" secondItem="vjd-XM-2F6" secondAttribute="trailing" constant="20" id="miC-Xy-Ce5"/>
