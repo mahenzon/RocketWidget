@@ -34,6 +34,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160698B91F80207C00C98ED1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				165E179A1F80038E00A29319 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		160698BA1F8020A700C98ED1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				165E17A11F80038E00A29319 /* Info.plist */,
+				165E17A21F80038E00A29319 /* RocketWidget.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		160698BB1F8020E500C98ED1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				165E179C1F80038E00A29319 /* Assets.xcassets */,
+				165E179E1F80038E00A29319 /* Main.storyboard */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		165E178C1F80038E00A29319 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				165E17981F80038E00A29319 /* AppDelegate.swift */,
-				165E179A1F80038E00A29319 /* ViewController.swift */,
-				165E179C1F80038E00A29319 /* Assets.xcassets */,
-				165E179E1F80038E00A29319 /* Main.storyboard */,
-				165E17A11F80038E00A29319 /* Info.plist */,
-				165E17A21F80038E00A29319 /* RocketWidget.entitlements */,
+				160698B91F80207C00C98ED1 /* View Controllers */,
+				160698BB1F8020E500C98ED1 /* Model */,
+				160698BA1F8020A700C98ED1 /* Supporting Files */,
 			);
 			path = RocketWidget;
 			sourceTree = "<group>";
@@ -263,11 +287,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RocketWidget/RocketWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "RocketWidget/Supporting Files/RocketWidget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4DNTYH93JQ;
-				INFOPLIST_FILE = RocketWidget/Info.plist;
+				INFOPLIST_FILE = "RocketWidget/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surik00.RocketWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -279,11 +303,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RocketWidget/RocketWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "RocketWidget/Supporting Files/RocketWidget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4DNTYH93JQ;
-				INFOPLIST_FILE = RocketWidget/Info.plist;
+				INFOPLIST_FILE = "RocketWidget/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.surik00.RocketWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
