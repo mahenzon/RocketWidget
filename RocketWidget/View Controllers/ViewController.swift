@@ -30,9 +30,11 @@ class ViewController: NSViewController {
     
     @IBAction func importConfigMenuItemSelected(_ sender: Any) {
         if rocketWidget.loadUserConfig() {
-            // TODO: - refresh view
+            fetchDataAndUpdateView()
         } else {
-            // TODO: - show alert config not imported
+            createAlert(withMessage: "Произошла ошибка при попытке чтения файла конфигурации.",
+                        informativeText: "Возможно, файл поврежден. Для того, чтобы получить корректный файл конфигурации, отправьте боту @AstreyBot команду /macos")
+                .runModal()
         }
     }
     
@@ -41,7 +43,9 @@ class ViewController: NSViewController {
             refreshButton.isHidden = true
             spinner.startAnimation(sender)
         } else {
-            // TODO: - show alert no config
+            createAlert(withMessage: "Не найдена пользовательская конфигурация!",
+                        informativeText: "Для того, чтобы получить корректный файл конфигурации, отправьте боту @AstreyBot команду /macos")
+                .runModal()
         }
     }
     
@@ -55,5 +59,13 @@ extension ViewController {
     // MARK: - Display
     func fetchDataAndUpdateView() {
         // TODO: - Update view here
+    }
+    func createAlert(withMessage message: String, informativeText text: String, style: NSAlert.Style = .warning) -> NSAlert {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.informativeText = text
+        alert.alertStyle = style
+
+        return alert
     }
 }
