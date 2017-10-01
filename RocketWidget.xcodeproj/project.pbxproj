@@ -20,6 +20,8 @@
 		165E179B1F80038E00A29319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E179A1F80038E00A29319 /* ViewController.swift */; };
 		165E179D1F80038E00A29319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165E179C1F80038E00A29319 /* Assets.xcassets */; };
 		165E17A01F80038E00A29319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165E179E1F80038E00A29319 /* Main.storyboard */; };
+		16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */; };
+		16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E721F814BB50024EC6E /* IntTimeFormatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		165E179F1F80038E00A29319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		165E17A11F80038E00A29319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		165E17A21F80038E00A29319 /* RocketWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RocketWidget.entitlements; sourceTree = "<group>"; };
+		16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleThousandsFormatting.swift; sourceTree = "<group>"; };
+		16626E721F814BB50024EC6E /* IntTimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTimeFormatting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			children = (
 				160698ED1F812B0F00C98ED1 /* StringMD5.swift */,
 				160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */,
+				16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */,
+				16626E721F814BB50024EC6E /* IntTimeFormatting.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,11 +232,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */,
+				16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
 				160698F01F812C1F00C98ED1 /* TimeIntervalToString.swift in Sources */,
 				160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */,
 				160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */,
 				160698BE1F80DE5F00C98ED1 /* UserConfiguration.swift in Sources */,
+				16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */,
 				160698EE1F812B0F00C98ED1 /* StringMD5.swift in Sources */,
 				165E179B1F80038E00A29319 /* ViewController.swift in Sources */,
 				160698E71F8127D900C98ED1 /* RequestRelatedEnums.swift in Sources */,
