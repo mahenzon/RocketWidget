@@ -22,6 +22,7 @@
 		165E17A01F80038E00A29319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165E179E1F80038E00A29319 /* Main.storyboard */; };
 		16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */; };
 		16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E721F814BB50024EC6E /* IntTimeFormatting.swift */; };
+		16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		165E17A21F80038E00A29319 /* RocketWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RocketWidget.entitlements; sourceTree = "<group>"; };
 		16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleThousandsFormatting.swift; sourceTree = "<group>"; };
 		16626E721F814BB50024EC6E /* IntTimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTimeFormatting.swift; sourceTree = "<group>"; };
+		16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToCurrencySymbol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */,
 				16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */,
 				16626E721F814BB50024EC6E /* IntTimeFormatting.swift */,
+				16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */,
 				16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */,
+				16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
 				160698F01F812C1F00C98ED1 /* TimeIntervalToString.swift in Sources */,
 				160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */,
