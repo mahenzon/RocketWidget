@@ -111,7 +111,7 @@ extension ViewController {
         rocketrubleLabel.stringValue = widget.rocketRubles.thousandsFormatting + " Р₽"
         
         for (label, operation) in zip(textLabels, widget.recentOperations) {
-            label.stringValue = "\(operation.name) \(operation.money.amount.thousandsFormatting) \(operation.money.currency.currencySymbol)"
+            label.stringValue = "\(operation.name) \(operation.money.amount.thousandsFormatting) \(operation.money.currency.currencySymbol)\n\(operation.date.timeFormatting)"
         }
         
         let imgsLoadQueue = DispatchQueue(label: "images_load", qos: .userInteractive, attributes: .concurrent)
