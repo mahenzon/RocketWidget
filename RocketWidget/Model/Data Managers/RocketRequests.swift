@@ -44,7 +44,7 @@ fileprivate func makeHeaders(deviceId: String, token: String) -> [String: String
 class RocketRequests {
     static let shared = RocketRequests()
     
-    var userConfiguration = UserConfiguration()
+    fileprivate var userConfiguration = UserConfiguration()
 
     func widget(withCompletion completion: @escaping (WidgetOrResponse?, String?) -> Void) {
         let url = URL(string: "\(apiHost)\(Methods.widget.rawValue)")!

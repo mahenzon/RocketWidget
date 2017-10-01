@@ -23,6 +23,7 @@
 		16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */; };
 		16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E721F814BB50024EC6E /* IntTimeFormatting.swift */; };
 		16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */; };
+		16626E791F8165460024EC6E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E781F8165460024EC6E /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleThousandsFormatting.swift; sourceTree = "<group>"; };
 		16626E721F814BB50024EC6E /* IntTimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTimeFormatting.swift; sourceTree = "<group>"; };
 		16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToCurrencySymbol.swift; sourceTree = "<group>"; };
+		16626E781F8165460024EC6E /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				160698E31F81263D00C98ED1 /* RocketRequests.swift */,
+				16626E781F8165460024EC6E /* ImageManager.swift */,
 			);
 			path = "Data Managers";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
 				160698F01F812C1F00C98ED1 /* TimeIntervalToString.swift in Sources */,
 				160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */,
+				16626E791F8165460024EC6E /* ImageManager.swift in Sources */,
 				160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */,
 				160698BE1F80DE5F00C98ED1 /* UserConfiguration.swift in Sources */,
 				16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */,
