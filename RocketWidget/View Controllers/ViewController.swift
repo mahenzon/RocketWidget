@@ -31,12 +31,18 @@ class ViewController: NSViewController {
     @IBAction func importConfigMenuItemSelected(_ sender: Any) {
         if rocketWidget.loadUserConfig() {
             // TODO: - refresh view
+        } else {
+            // TODO: - show alert config not imported
         }
     }
     
     @IBAction func refreshClicked(_ sender: Any) {
-        refreshButton.isHidden = true
-        spinner.startAnimation(sender)
+        if userConfiguration.isPresent {
+            refreshButton.isHidden = true
+            spinner.startAnimation(sender)
+        } else {
+            // TODO: - show alert no config
+        }
     }
     
     override func viewDidLoad() {
@@ -45,3 +51,9 @@ class ViewController: NSViewController {
     }
 }
 
+extension ViewController {
+    // MARK: - Display
+    func fetchDataAndUpdateView() {
+        // TODO: - Update view here
+    }
+}

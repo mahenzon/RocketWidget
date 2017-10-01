@@ -35,4 +35,11 @@ struct UserConfiguration {
             UserDefaults.standard.set(newValue, forKey: widgetTokenKey)
         }
     }
+    
+    var isPresent: Bool {
+        if deviceId == "" && widgetToken == "" {
+            return false
+        }
+        return true
+    }
 }
