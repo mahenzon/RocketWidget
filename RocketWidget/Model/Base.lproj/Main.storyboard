@@ -179,6 +179,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="refreshClicked:" target="XfG-lQ-9wD" id="Lcl-fF-BeS"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vjd-XM-2F6">
                                 <rect key="frame" x="18" y="187" width="424" height="22"/>
@@ -331,6 +334,19 @@
                             <constraint firstItem="QV6-c0-abG" firstAttribute="top" secondItem="nUG-dy-mHL" secondAttribute="bottom" constant="8" id="zAY-Eo-Kyf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="lwR-EH-3wz" id="SYm-np-5KM"/>
+                        <outlet property="firstImageView" destination="jm2-Yg-rze" id="wuL-r3-tXy"/>
+                        <outlet property="firstTextLabel" destination="DVK-9Q-ffT" id="cCz-q0-VKt"/>
+                        <outlet property="refreshButton" destination="2gK-zU-kG2" id="EAF-QN-MKF"/>
+                        <outlet property="remainingCashoutsLabel" destination="vjd-XM-2F6" id="Ix9-u9-AR8"/>
+                        <outlet property="rocketrubleLabel" destination="msJ-Xq-nxD" id="Uln-pF-NEc"/>
+                        <outlet property="secondImageView" destination="cOE-Ni-9KJ" id="CPP-9X-67j"/>
+                        <outlet property="secondTextLabel" destination="b5X-SP-csC" id="zEI-LM-9Dj"/>
+                        <outlet property="spinner" destination="0lk-Xm-hlL" id="d0c-bb-uEz"/>
+                        <outlet property="thirdImageView" destination="rKi-bp-IqV" id="iNB-ZC-sHr"/>
+                        <outlet property="thirdTextLabel" destination="KCf-du-ZTo" id="0Os-Fq-0Tg"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
