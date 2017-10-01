@@ -15,6 +15,7 @@
 		160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698E81F81281300C98ED1 /* RocketResponseModels.swift */; };
 		160698EB1F812A6E00C98ED1 /* SwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698EA1F812A6E00C98ED1 /* SwiftMD5.swift */; };
 		160698EE1F812B0F00C98ED1 /* StringMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698ED1F812B0F00C98ED1 /* StringMD5.swift */; };
+		160698F01F812C1F00C98ED1 /* TimeIntervalToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */; };
 		165E17991F80038E00A29319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E17981F80038E00A29319 /* AppDelegate.swift */; };
 		165E179B1F80038E00A29319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E179A1F80038E00A29319 /* ViewController.swift */; };
 		165E179D1F80038E00A29319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165E179C1F80038E00A29319 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		160698E81F81281300C98ED1 /* RocketResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketResponseModels.swift; sourceTree = "<group>"; };
 		160698EA1F812A6E00C98ED1 /* SwiftMD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMD5.swift; sourceTree = "<group>"; };
 		160698ED1F812B0F00C98ED1 /* StringMD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMD5.swift; sourceTree = "<group>"; };
+		160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalToString.swift; sourceTree = "<group>"; };
 		165E17951F80038E00A29319 /* RocketWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165E17981F80038E00A29319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165E179A1F80038E00A29319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				160698ED1F812B0F00C98ED1 /* StringMD5.swift */,
+				160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
+				160698F01F812C1F00C98ED1 /* TimeIntervalToString.swift in Sources */,
 				160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */,
 				160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */,
 				160698BE1F80DE5F00C98ED1 /* UserConfiguration.swift in Sources */,
