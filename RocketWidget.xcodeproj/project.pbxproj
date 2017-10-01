@@ -10,6 +10,9 @@
 		160698BE1F80DE5F00C98ED1 /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698BD1F80DE5F00C98ED1 /* UserConfiguration.swift */; };
 		160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698C01F80E32700C98ED1 /* UserConfigJSONModel.swift */; };
 		160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698C21F80E40600C98ED1 /* RocketWidget.swift */; };
+		160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698E31F81263D00C98ED1 /* RocketRequests.swift */; };
+		160698E71F8127D900C98ED1 /* RequestRelatedEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698E61F8127D900C98ED1 /* RequestRelatedEnums.swift */; };
+		160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160698E81F81281300C98ED1 /* RocketResponseModels.swift */; };
 		165E17991F80038E00A29319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E17981F80038E00A29319 /* AppDelegate.swift */; };
 		165E179B1F80038E00A29319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E179A1F80038E00A29319 /* ViewController.swift */; };
 		165E179D1F80038E00A29319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 165E179C1F80038E00A29319 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		160698BD1F80DE5F00C98ED1 /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
 		160698C01F80E32700C98ED1 /* UserConfigJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigJSONModel.swift; sourceTree = "<group>"; };
 		160698C21F80E40600C98ED1 /* RocketWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketWidget.swift; sourceTree = "<group>"; };
+		160698E31F81263D00C98ED1 /* RocketRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketRequests.swift; sourceTree = "<group>"; };
+		160698E61F8127D900C98ED1 /* RequestRelatedEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRelatedEnums.swift; sourceTree = "<group>"; };
+		160698E81F81281300C98ED1 /* RocketResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketResponseModels.swift; sourceTree = "<group>"; };
 		165E17951F80038E00A29319 /* RocketWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		165E17981F80038E00A29319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165E179A1F80038E00A29319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				160698C21F80E40600C98ED1 /* RocketWidget.swift */,
+				160698E21F8125FF00C98ED1 /* Data Managers */,
 				160698BC1F80DE2200C98ED1 /* Structs */,
+				160698E51F81279900C98ED1 /* Enums */,
 				165E179C1F80038E00A29319 /* Assets.xcassets */,
 				165E179E1F80038E00A29319 /* Main.storyboard */,
 			);
@@ -71,8 +79,8 @@
 		160698BC1F80DE2200C98ED1 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				160698BF1F80E2F600C98ED1 /* JSONTemplates */,
 				160698BD1F80DE5F00C98ED1 /* UserConfiguration.swift */,
+				160698BF1F80E2F600C98ED1 /* JSONTemplates */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -81,8 +89,25 @@
 			isa = PBXGroup;
 			children = (
 				160698C01F80E32700C98ED1 /* UserConfigJSONModel.swift */,
+				160698E81F81281300C98ED1 /* RocketResponseModels.swift */,
 			);
 			path = JSONTemplates;
+			sourceTree = "<group>";
+		};
+		160698E21F8125FF00C98ED1 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				160698E31F81263D00C98ED1 /* RocketRequests.swift */,
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		160698E51F81279900C98ED1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				160698E61F8127D900C98ED1 /* RequestRelatedEnums.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		165E178C1F80038E00A29319 = {
@@ -183,10 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
+				160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */,
 				160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */,
 				160698BE1F80DE5F00C98ED1 /* UserConfiguration.swift in Sources */,
 				165E179B1F80038E00A29319 /* ViewController.swift in Sources */,
+				160698E71F8127D900C98ED1 /* RequestRelatedEnums.swift in Sources */,
 				165E17991F80038E00A29319 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
