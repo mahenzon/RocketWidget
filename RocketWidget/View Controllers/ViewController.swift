@@ -109,6 +109,7 @@ extension ViewController {
     private func fillView(from widget: Widget) {
         balanceLabel.stringValue = widget.balance.thousandsFormatting + " ₽"
         rocketrubleLabel.stringValue = widget.rocketRubles.thousandsFormatting + " Р₽"
+        remainingCashoutsLabel.stringValue = widget.unlimitedCashouts ? "Нет ограничений на снятия" : "\(widget.freeCashOutLimit - widget.cashOutCount) из \(widget.freeCashOutLimit) бесплатных снятий"
         
         for (label, operation) in zip(textLabels, widget.recentOperations) {
             label.stringValue = "\(operation.name) \(operation.money.amount.thousandsFormatting) \(operation.money.currency.currencySymbol)\n\(operation.date.timeFormatting)"
