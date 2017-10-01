@@ -10,6 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    var userConfiguration = UserConfiguration()
+    let rocketWidget = RocketWidget()
+    
     var imageViews = [NSImageView]()
     var textLabels = [NSTextField]()
     
@@ -25,7 +28,15 @@ class ViewController: NSViewController {
     @IBOutlet weak var secondTextLabel: NSTextField!
     @IBOutlet weak var thirdTextLabel: NSTextField!
     
+    @IBAction func importConfigMenuItemSelected(_ sender: Any) {
+        if rocketWidget.loadUserConfig() {
+            // TODO: - refresh view
+        }
+    }
+    
     @IBAction func refreshClicked(_ sender: Any) {
+        refreshButton.isHidden = true
+        spinner.startAnimation(sender)
     }
     
     override func viewDidLoad() {
