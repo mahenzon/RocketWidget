@@ -109,10 +109,10 @@ extension ViewController {
     private func fillView(from widget: Widget) {
         balanceLabel.stringValue = widget.balance.thousandsFormatting + " ₽"
         rocketrubleLabel.stringValue = widget.rocketRubles.thousandsFormatting + " Р₽"
-        remainingCashoutsLabel.stringValue = widget.unlimitedCashouts ? "Нет ограничений на снятия" : "\(widget.freeCashOutLimit - widget.cashOutCount) из \(widget.freeCashOutLimit) бесплатных снятий"
+        remainingCashoutsLabel.stringValue = widget.cashoutsText
         
         for (label, operation) in zip(textLabels, widget.recentOperations) {
-            label.stringValue = "\(operation.name) \(operation.money.amount.thousandsFormatting) \(operation.money.currency.currencySymbol)\n\(operation.date.timeFormatting)"
+            label.attributedStringValue = rocketWidget.formatOperationLabel(operation: operation)
         }
         
         let imgsLoadQueue = DispatchQueue(label: "images_load", qos: .userInteractive, attributes: .concurrent)

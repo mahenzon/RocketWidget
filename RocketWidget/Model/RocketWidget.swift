@@ -36,4 +36,21 @@ class RocketWidget {
         }
         return false
     }
+    
+    func formatOperationLabel(operation: RocketOperation) -> NSAttributedString {
+        var htmlFormattedString = ""
+        htmlFormattedString += "<span style=\"font-size: 18\">"
+        htmlFormattedString += operation.name + " "
+        htmlFormattedString += "<b>"
+        htmlFormattedString += operation.money.amount.thousandsFormatting + " "
+        htmlFormattedString += operation.money.currency.currencySymbol
+        htmlFormattedString += "</b>"
+        htmlFormattedString += "</span>"
+        htmlFormattedString += "<br>"
+        htmlFormattedString += "<span style=\"font-size: 16; color: gray\">"
+        htmlFormattedString += operation.date.timeFormatting
+        htmlFormattedString += "</span>"
+
+        return htmlFormattedString.html2AttributedString
+    }
 }
