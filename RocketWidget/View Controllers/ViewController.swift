@@ -105,7 +105,7 @@ extension ViewController {
             }
         }
     }
-    
+
     private func fillView(from widget: Widget) {
         balanceLabel.stringValue = widget.balance.thousandsFormatting + " ₽"
         rocketrubleLabel.stringValue = widget.rocketRubles.thousandsFormatting + " Р₽"
@@ -130,7 +130,6 @@ extension ViewController {
                 }
             }
         }
-        
     }
 
     func createAlert(withMessage message: String, informativeText text: String, style: NSAlert.Style = .warning) -> NSAlert {
