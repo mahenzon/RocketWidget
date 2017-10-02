@@ -24,6 +24,8 @@
 		16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E721F814BB50024EC6E /* IntTimeFormatting.swift */; };
 		16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */; };
 		16626E791F8165460024EC6E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E781F8165460024EC6E /* ImageManager.swift */; };
+		16626E7B1F82AD890024EC6E /* WidgetCashouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */; };
+		168B94CF1F82B5C4007E15DF /* StringToAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		16626E721F814BB50024EC6E /* IntTimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTimeFormatting.swift; sourceTree = "<group>"; };
 		16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToCurrencySymbol.swift; sourceTree = "<group>"; };
 		16626E781F8165460024EC6E /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCashouts.swift; sourceTree = "<group>"; };
+		168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToAttributedString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,11 +134,13 @@
 		160698EC1F812AE000C98ED1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				160698ED1F812B0F00C98ED1 /* StringMD5.swift */,
-				160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */,
 				16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */,
 				16626E721F814BB50024EC6E /* IntTimeFormatting.swift */,
+				160698ED1F812B0F00C98ED1 /* StringMD5.swift */,
+				168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */,
 				16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */,
+				160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */,
+				16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */,
+				168B94CF1F82B5C4007E15DF /* StringToAttributedString.swift in Sources */,
 				16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */,
 				16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
@@ -250,6 +257,7 @@
 				160698EE1F812B0F00C98ED1 /* StringMD5.swift in Sources */,
 				165E179B1F80038E00A29319 /* ViewController.swift in Sources */,
 				160698E71F8127D900C98ED1 /* RequestRelatedEnums.swift in Sources */,
+				16626E7B1F82AD890024EC6E /* WidgetCashouts.swift in Sources */,
 				160698EB1F812A6E00C98ED1 /* SwiftMD5.swift in Sources */,
 				165E17991F80038E00A29319 /* AppDelegate.swift in Sources */,
 			);
