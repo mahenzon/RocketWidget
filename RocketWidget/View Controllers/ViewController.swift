@@ -41,14 +41,13 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func refreshMenuItemSelected(_ sender: Any) {
+        refreshData()
+    }
+    
+    
     @IBAction func refreshClicked(_ sender: Any) {
-        if userConfiguration.isPresent {
-            fetchDataAndUpdateView()
-        } else {
-            createAlert(withMessage: "Не найдена пользовательская конфигурация!",
-                        informativeText: "Для того, чтобы получить корректный файл конфигурации, отправьте боту @AstreyBot команду /macos")
-                .runModal()
-        }
+        refreshData()
     }
     
     override func viewDidLoad() {
@@ -62,7 +61,19 @@ class ViewController: NSViewController {
 
 
 extension ViewController {
+    
     // MARK: - Display
+
+    func refreshData () {
+        if userConfiguration.isPresent {
+            fetchDataAndUpdateView()
+        } else {
+            createAlert(withMessage: "Не найдена пользовательская конфигурация!",
+                        informativeText: "Для того, чтобы получить корректный файл конфигурации, отправьте боту @AstreyBot команду /macos")
+                .runModal()
+        }
+    }
+    
     func fetchDataAndUpdateView() {
         refreshButton.isHidden = true
         spinner.startAnimation(nil)

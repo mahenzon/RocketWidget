@@ -55,6 +55,12 @@
                                                 <action selector="importConfigMenuItemSelected:" target="Ady-hI-5gd" id="SCM-0Z-aBP"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="XfD-Yl-n7f"/>
+                                        <menuItem title="Reload" keyEquivalent="r" id="ITq-H5-Ytc">
+                                            <connections>
+                                                <action selector="refreshMenuItemSelected:" target="Ady-hI-5gd" id="vPE-lx-df0"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
