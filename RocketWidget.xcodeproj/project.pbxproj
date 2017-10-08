@@ -29,6 +29,7 @@
 		16ACC2401F8A11170097EF09 /* StringTruncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACC23F1F8A11160097EF09 /* StringTruncate.swift */; };
 		16F8F0281F8A3E6A005EB978 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */; };
 		16F8F02A1F8A4658005EB978 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F0291F8A4658005EB978 /* Preferences.swift */; };
+		16F8F02C1F8A5C15005EB978 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F02B1F8A5C15005EB978 /* NotificationNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		16ACC23F1F8A11160097EF09 /* StringTruncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTruncate.swift; sourceTree = "<group>"; };
 		16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
 		16F8F0291F8A4658005EB978 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		16F8F02B1F8A5C15005EB978 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				16626E701F814B720024EC6E /* DoubleThousandsFormatting.swift */,
 				16626E721F814BB50024EC6E /* IntTimeFormatting.swift */,
+				16F8F02B1F8A5C15005EB978 /* NotificationNames.swift */,
 				160698ED1F812B0F00C98ED1 /* StringMD5.swift */,
 				168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */,
 				16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */,
@@ -256,6 +259,7 @@
 				16F8F0281F8A3E6A005EB978 /* PrefsViewController.swift in Sources */,
 				16F8F02A1F8A4658005EB978 /* Preferences.swift in Sources */,
 				168B94CF1F82B5C4007E15DF /* StringToAttributedString.swift in Sources */,
+				16F8F02C1F8A5C15005EB978 /* NotificationNames.swift in Sources */,
 				16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */,
 				16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,

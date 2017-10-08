@@ -53,5 +53,6 @@ extension PrefsViewController {
         prefs.hideStatusBarMenu = hideStatusBarMenuCheck.state == .on ? true : false
         prefs.startToStatusBar = startToStatusBarCheck.state == .on ? true : false
         prefs.hideFromDockWhenWindowClosed = hideFromDockWhenWindowClosedCheck.state == .on ? true : false
+        NotificationCenter.default.post(name: Notification.Name.prefsChanged, object: nil)
     }
 }

@@ -12,6 +12,8 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var prefs = Preferences()
+    
+    let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return prefs.exitOnClose
@@ -40,12 +42,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             resetSettings()
             UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
+        if let button = statusBarItem.button {
+            button.image = NSImage(named: NSImage.Name("statusBarArrow"))
+        }
+    }
+    
+    required override init() {
+        super.init()
+        NotificationCenter.default.addObserver(forName: Notification.Name.prefsChanged, object: nil, queue: nil, using: toggleStatusBarItem)
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    func toggleStatusBarItem(_ notification: Notification) {
+        statusBarItem.isVisible = prefs.statusBarMenuEnabled
     }
 
-
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
