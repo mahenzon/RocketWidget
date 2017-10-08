@@ -14,7 +14,7 @@ extension Int {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.locale = NSLocale.current
-        dateFormatter.dateFormat = "HH:mm dd.MM.yyyy"
+        dateFormatter.dateFormat = "HH:mm, dd.MM.yyyy"
         return dateFormatter.string(from: date)
     }
 }

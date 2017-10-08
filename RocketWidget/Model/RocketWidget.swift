@@ -40,7 +40,7 @@ class RocketWidget {
     func formatOperationLabel(operation: RocketOperation) -> NSAttributedString {
         var htmlFormattedString = ""
         htmlFormattedString += "<span style=\"font-size: 18\">"
-        htmlFormattedString += operation.name + " "
+        htmlFormattedString += operation.name.truncate(length: 25) + " "
         htmlFormattedString += "<b>"
         htmlFormattedString += operation.money.amount.thousandsFormatting + " "
         htmlFormattedString += operation.money.currency.currencySymbol

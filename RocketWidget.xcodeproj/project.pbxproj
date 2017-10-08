@@ -26,6 +26,7 @@
 		16626E791F8165460024EC6E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E781F8165460024EC6E /* ImageManager.swift */; };
 		16626E7B1F82AD890024EC6E /* WidgetCashouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */; };
 		168B94CF1F82B5C4007E15DF /* StringToAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */; };
+		16ACC2401F8A11170097EF09 /* StringTruncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACC23F1F8A11160097EF09 /* StringTruncate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		16626E781F8165460024EC6E /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCashouts.swift; sourceTree = "<group>"; };
 		168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToAttributedString.swift; sourceTree = "<group>"; };
+		16ACC23F1F8A11160097EF09 /* StringTruncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTruncate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				160698ED1F812B0F00C98ED1 /* StringMD5.swift */,
 				168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */,
 				16626E761F814E970024EC6E /* StringToCurrencySymbol.swift */,
+				16ACC23F1F8A11160097EF09 /* StringTruncate.swift */,
 				160698EF1F812C1F00C98ED1 /* TimeIntervalToString.swift */,
 				16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */,
 			);
@@ -249,6 +252,7 @@
 				16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */,
 				160698C31F80E40600C98ED1 /* RocketWidget.swift in Sources */,
 				160698F01F812C1F00C98ED1 /* TimeIntervalToString.swift in Sources */,
+				16ACC2401F8A11170097EF09 /* StringTruncate.swift in Sources */,
 				160698E41F81263D00C98ED1 /* RocketRequests.swift in Sources */,
 				16626E791F8165460024EC6E /* ImageManager.swift in Sources */,
 				160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */,
