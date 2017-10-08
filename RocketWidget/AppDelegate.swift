@@ -11,13 +11,23 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    var eventMonitor: EventMonitor?
+    
     var prefs = Preferences()
     
     let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     let popover = NSPopover()
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return prefs.exitOnClose
+        if prefs.exitOnClose {
+            if prefs.statusBarMenuEnabled {
+                return prefs.exitEvenIfStatusBarMenuEnabled
+            } else {
+                return true
+            }
+        } else {
+            return false
+        }
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
@@ -46,6 +56,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = #selector(togglePopover(_:))
         }
         popover.contentViewController = ViewController.freshController()
+        
+        // force subscribing it on Notifications
+        showPopover(sender: nil)
+        closePopover(sender: nil)
+        
+        eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+            if let strongSelf = self, strongSelf.popover.isShown, strongSelf.prefs.hideStatusBarMenu {
+                strongSelf.closePopover(sender: event)
+            }
+        }
     }
     
     @objc func togglePopover(_ sender: Any?) {
@@ -59,11 +79,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func showPopover(sender: Any?) {
         if let button = statusBarItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            eventMonitor?.start()
         }
     }
     
     func closePopover(sender: Any?) {
         popover.performClose(sender)
+        eventMonitor?.stop()
     }
     
     required override init() {

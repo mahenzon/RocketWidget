@@ -176,7 +176,7 @@
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PK-OU-JMl">
                                 <rect key="frame" x="18" y="99" width="341" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Запускать сразу в статус бар, без основного окна" bezelStyle="regularSquare" imagePosition="left" inset="2" id="yCW-L8-k8P">
+                                <buttonCell key="cell" type="check" title="Запускать сразу в статус бар, без основного окна" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="yCW-L8-k8P">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
