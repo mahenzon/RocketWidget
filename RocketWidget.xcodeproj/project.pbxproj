@@ -27,6 +27,8 @@
 		16626E7B1F82AD890024EC6E /* WidgetCashouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */; };
 		168B94CF1F82B5C4007E15DF /* StringToAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */; };
 		16ACC2401F8A11170097EF09 /* StringTruncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACC23F1F8A11160097EF09 /* StringTruncate.swift */; };
+		16F8F0281F8A3E6A005EB978 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */; };
+		16F8F02A1F8A4658005EB978 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F0291F8A4658005EB978 /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		16626E7A1F82AD890024EC6E /* WidgetCashouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCashouts.swift; sourceTree = "<group>"; };
 		168B94CE1F82B5C4007E15DF /* StringToAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToAttributedString.swift; sourceTree = "<group>"; };
 		16ACC23F1F8A11160097EF09 /* StringTruncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTruncate.swift; sourceTree = "<group>"; };
+		16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		16F8F0291F8A4658005EB978 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				165E179A1F80038E00A29319 /* ViewController.swift */,
+				16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				160698BD1F80DE5F00C98ED1 /* UserConfiguration.swift */,
+				16F8F0291F8A4658005EB978 /* Preferences.swift */,
 				160698BF1F80E2F600C98ED1 /* JSONTemplates */,
 			);
 			path = Structs;
@@ -247,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				160698E91F81281300C98ED1 /* RocketResponseModels.swift in Sources */,
+				16F8F0281F8A3E6A005EB978 /* PrefsViewController.swift in Sources */,
+				16F8F02A1F8A4658005EB978 /* Preferences.swift in Sources */,
 				168B94CF1F82B5C4007E15DF /* StringToAttributedString.swift in Sources */,
 				16626E711F814B720024EC6E /* DoubleThousandsFormatting.swift in Sources */,
 				16626E771F814E970024EC6E /* StringToCurrencySymbol.swift in Sources */,

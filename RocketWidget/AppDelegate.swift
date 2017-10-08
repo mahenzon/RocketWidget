@@ -10,9 +10,11 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    var prefs = Preferences()
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return false
+        return prefs.exitOnClose
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
@@ -24,9 +26,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
+    func resetSettings() {
+        prefs.exitOnClose = false
+        prefs.exitEvenIfStatusBarMenuEnabled = false
+        prefs.statusBarMenuEnabled = true
+        prefs.hideStatusBarMenu = true
+        prefs.startToStatusBar = false
+        prefs.hideFromDockWhenWindowClosed = true
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        if !UserDefaults.standard.bool(forKey: "launchedBefore") {
+            resetSettings()
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

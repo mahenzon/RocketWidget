@@ -24,7 +24,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="tmt-1L-Gk0" kind="show" id="Zr3-uG-FLT"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Hide RocketWidget" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
@@ -108,6 +112,125 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="IKu-if-pt2">
+            <objects>
+                <windowController id="tmt-1L-Gk0" sceneMemberID="viewController">
+                    <window key="window" title="Настройки" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dnQ-CE-Ffb">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="tmt-1L-Gk0" id="v22-Gx-mVd"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="SM6-v8-kxU" kind="relationship" relationship="window.shadowedContentViewController" id="FUy-pw-whL"/>
+                    </connections>
+                </windowController>
+                <customObject id="PFP-Dd-ImD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="224"/>
+        </scene>
+        <!--Prefs View Controller-->
+        <scene sceneID="Ozh-j8-MKB">
+            <objects>
+                <viewController id="SM6-v8-kxU" customClass="PrefsViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="UsG-1S-hSt">
+                        <rect key="frame" x="0.0" y="0.0" width="399" height="241"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjA-uk-gOi">
+                                <rect key="frame" x="18" y="205" width="186" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Выход при закрытии окна" bezelStyle="regularSquare" imagePosition="left" inset="2" id="mEX-WZ-356">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-hv-gCx">
+                                <rect key="frame" x="18" y="152" width="235" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Выпадающее меню в статус баре" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="HL6-2M-ETF">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9b4-Hr-Wba">
+                                <rect key="frame" x="36" y="132" width="345" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Прятать при переключении на другое приложение" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Zb5-38-ihf">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHc-dW-7yA">
+                                <rect key="frame" x="36" y="185" width="284" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Даже если включено меню в статус баре" bezelStyle="regularSquare" imagePosition="left" inset="2" id="I7N-aG-rwl">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PK-OU-JMl">
+                                <rect key="frame" x="18" y="99" width="341" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Запускать сразу в статус бар, без основного окна" bezelStyle="regularSquare" imagePosition="left" inset="2" id="yCW-L8-k8P">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yrY-D2-vkV">
+                                <rect key="frame" x="18" y="66" width="314" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Скрывать иконку из дока, когда окно закрыто" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="obC-tf-RnH">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sj-TH-2KK">
+                                <rect key="frame" x="14" y="13" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i5y-Wb-RAi">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" target="SM6-v8-kxU" id="QE4-Y5-22Q"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqT-BA-j6j">
+                                <rect key="frame" x="326" y="13" width="59" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0vC-oU-gfH">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="okButtonClicked:" target="SM6-v8-kxU" id="YPC-GP-3ey"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="exitEvenIfStatusBarMenuEnabledCheck" destination="vHc-dW-7yA" id="gLf-Ux-pvb"/>
+                        <outlet property="exitOnCloseCheck" destination="wjA-uk-gOi" id="gkV-BA-QnB"/>
+                        <outlet property="hideFromDockWhenWindowClosedCheck" destination="yrY-D2-vkV" id="9pX-xB-I8E"/>
+                        <outlet property="hideStatusBarMenuCheck" destination="9b4-Hr-Wba" id="Fj4-ng-oUo"/>
+                        <outlet property="startToStatusBarCheck" destination="1PK-OU-JMl" id="f1h-Q6-8X2"/>
+                        <outlet property="statusBarMenuEnabledCheck" destination="ldi-hv-gCx" id="54n-H0-8mJ"/>
+                    </connections>
+                </viewController>
+                <customObject id="BBg-NO-026" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583.5" y="690.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
