@@ -80,6 +80,8 @@ extension ViewController {
         requests.widget() { result, errorMessage in
             guard errorMessage == nil else {
                 DispatchQueue.main.async {
+                    self.spinner.stopAnimation(nil)
+                    self.refreshButton.isHidden = false
                     self.createAlert(withMessage: "Ой, ошибочка вышла!",
                                      informativeText: "Мне не удалось загрузить никакой информацию, вернулась такая ошибка:\n\(errorMessage!)")
                         .runModal()
@@ -88,6 +90,8 @@ extension ViewController {
             }
             guard let widgetOrResponse = result else {
                 DispatchQueue.main.async {
+                    self.spinner.stopAnimation(nil)
+                    self.refreshButton.isHidden = false
                     self.createAlert(withMessage: "Ой, ошибочка вышла!",
                                      informativeText: "Мне не удалось загрузить никакой информации, даже ошибка не вывалилась! Попробуй перезапустить приложение и / или перезалить конфиг.")
                         .runModal()
@@ -109,6 +113,8 @@ extension ViewController {
                     infoText = response.response.description
                 }
                 DispatchQueue.main.async {
+                    self.spinner.stopAnimation(nil)
+                    self.refreshButton.isHidden = false
                     self.createAlert(withMessage: "Ошибка получения данных!",
                                      informativeText: infoText)
                         .runModal()
