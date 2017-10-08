@@ -53,9 +53,22 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         imageViews = [firstImageView, secondImageView, thirdImageView]
         textLabels = [firstTextLabel, secondTextLabel, thirdTextLabel]
+
+        NotificationCenter.default.addObserver(forName: .widgetUpdated, object: nil, queue: nil) { notification in
+            if let widget = notification.object as? Widget {
+                DispatchQueue.main.async {
+                    self.fillView(from: widget)
+                }
+            }
+        }
+
         if userConfiguration.isPresent {
             fetchDataAndUpdateView()
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -101,7 +114,7 @@ extension ViewController {
             switch widgetOrResponse {
             case .widget(let widget):
                 DispatchQueue.main.async {
-                    self.fillView(from: widget)
+                    NotificationCenter.default.post(name: .widgetUpdated, object: widget)
                     self.spinner.stopAnimation(nil)
                     self.refreshButton.isHidden = false
                 }
@@ -156,5 +169,18 @@ extension ViewController {
         alert.alertStyle = style
 
         return alert
+    }
+}
+
+extension ViewController {
+    // MARK: - Instantiation StroyBoard for the SB item
+    
+    static func freshController() -> ViewController {
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        let identifier = NSStoryboard.SceneIdentifier(rawValue: "MainViewController")
+        guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? ViewController else {
+            fatalError("Why cant i find ViewController? - Check Main.storyboard")
+        }
+        return viewcontroller
     }
 }

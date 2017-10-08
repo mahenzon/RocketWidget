@@ -10,4 +10,5 @@ import Foundation
 
 extension Notification.Name {
     static let prefsChanged = Notification.Name("PrefsChanged")
+    static let widgetUpdated = Notification.Name("WidgetUpdated")
 }

@@ -184,7 +184,7 @@
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yrY-D2-vkV">
                                 <rect key="frame" x="18" y="66" width="314" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Скрывать иконку из дока, когда окно закрыто" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="obC-tf-RnH">
+                                <buttonCell key="cell" type="check" title="Скрывать иконку из дока, когда окно закрыто" bezelStyle="regularSquare" imagePosition="left" enabled="NO" inset="2" id="obC-tf-RnH">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -235,7 +235,7 @@ DQ
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="460" height="289"/>
                         <autoresizingMask key="autoresizingMask"/>

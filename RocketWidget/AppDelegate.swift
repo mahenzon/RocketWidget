@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var prefs = Preferences()
     
     let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    let popover = NSPopover()
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return prefs.exitOnClose
@@ -21,9 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if !flag {
-            for window: AnyObject in sender.windows {
-                window.makeKeyAndOrderFront(self)
-            }
+            sender.windows[2].makeKeyAndOrderFront(self)
         }
         return true
     }
@@ -34,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         prefs.statusBarMenuEnabled = true
         prefs.hideStatusBarMenu = true
         prefs.startToStatusBar = false
-        prefs.hideFromDockWhenWindowClosed = true
+        prefs.hideFromDockWhenWindowClosed = false
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -44,12 +43,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         if let button = statusBarItem.button {
             button.image = NSImage(named: NSImage.Name("statusBarArrow"))
+            button.action = #selector(togglePopover(_:))
         }
+        popover.contentViewController = ViewController.freshController()
+    }
+    
+    @objc func togglePopover(_ sender: Any?) {
+        if popover.isShown {
+            closePopover(sender: sender)
+        } else {
+            showPopover(sender: sender)
+        }
+    }
+    
+    func showPopover(sender: Any?) {
+        if let button = statusBarItem.button {
+            popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+        }
+    }
+    
+    func closePopover(sender: Any?) {
+        popover.performClose(sender)
     }
     
     required override init() {
         super.init()
-        NotificationCenter.default.addObserver(forName: Notification.Name.prefsChanged, object: nil, queue: nil, using: toggleStatusBarItem)
+        NotificationCenter.default.addObserver(forName: .prefsChanged, object: nil, queue: nil, using: toggleStatusBarItem)
     }
 
     func toggleStatusBarItem(_ notification: Notification) {
