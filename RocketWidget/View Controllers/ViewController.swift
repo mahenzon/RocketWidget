@@ -31,6 +31,10 @@ class ViewController: NSViewController {
     @IBOutlet weak var secondTextLabel: NSTextField!
     @IBOutlet weak var thirdTextLabel: NSTextField!
     
+    @IBOutlet weak var firstStackView: NSStackView!
+    @IBOutlet weak var secondStackView: NSStackView!
+    @IBOutlet weak var thirdStackView: NSStackView!
+    
     @IBAction func importConfigMenuItemSelected(_ sender: Any) {
         if rocketWidget.loadUserConfig() {
             fetchDataAndUpdateView()

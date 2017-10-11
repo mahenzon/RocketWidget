@@ -253,7 +253,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lwR-EH-3wz">
-                                <rect key="frame" x="106" y="246" width="291" height="22"/>
+                                <rect key="frame" x="106" y="246" width="286" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="4ab-LJ-wPK"/>
                                 </constraints>
@@ -287,14 +287,14 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-zU-kG2">
-                                <rect key="frame" x="415" y="243" width="25" height="27"/>
+                                <rect key="frame" x="410" y="238" width="30" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="3UQ-fj-eDN"/>
-                                    <constraint firstAttribute="width" constant="25" id="Q20-KX-ONS"/>
+                                    <constraint firstAttribute="height" constant="30" id="3UQ-fj-eDN"/>
+                                    <constraint firstAttribute="width" constant="30" id="Q20-KX-ONS"/>
                                 </constraints>
-                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="td6-OI-kja">
+                                <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSRefreshTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="td6-OI-kja">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="refreshClicked:" target="XfG-lQ-9wD" id="Lcl-fF-BeS"/>
@@ -416,7 +416,7 @@ DQ
                                 </customSpacing>
                             </stackView>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="0lk-Xm-hlL">
-                                <rect key="frame" x="419" y="249" width="16" height="16"/>
+                                <rect key="frame" x="417" y="246" width="16" height="16"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
@@ -454,20 +454,23 @@ DQ
                     <connections>
                         <outlet property="balanceLabel" destination="lwR-EH-3wz" id="SYm-np-5KM"/>
                         <outlet property="firstImageView" destination="jm2-Yg-rze" id="wuL-r3-tXy"/>
+                        <outlet property="firstStackView" destination="QV6-c0-abG" id="LGD-n4-ikx"/>
                         <outlet property="firstTextLabel" destination="DVK-9Q-ffT" id="cCz-q0-VKt"/>
                         <outlet property="refreshButton" destination="2gK-zU-kG2" id="EAF-QN-MKF"/>
                         <outlet property="remainingCashoutsLabel" destination="vjd-XM-2F6" id="Ix9-u9-AR8"/>
                         <outlet property="rocketrubleLabel" destination="msJ-Xq-nxD" id="Uln-pF-NEc"/>
                         <outlet property="secondImageView" destination="cOE-Ni-9KJ" id="CPP-9X-67j"/>
+                        <outlet property="secondStackView" destination="WNQ-4B-6fy" id="C2p-rI-173"/>
                         <outlet property="secondTextLabel" destination="b5X-SP-csC" id="zEI-LM-9Dj"/>
                         <outlet property="spinner" destination="0lk-Xm-hlL" id="d0c-bb-uEz"/>
                         <outlet property="thirdImageView" destination="rKi-bp-IqV" id="iNB-ZC-sHr"/>
+                        <outlet property="thirdStackView" destination="kZt-5J-I3r" id="O91-z4-q4Z"/>
                         <outlet property="thirdTextLabel" destination="KCf-du-ZTo" id="0Os-Fq-0Tg"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="767"/>
+            <point key="canvasLocation" x="75" y="766.5"/>
         </scene>
     </scenes>
     <resources>
