@@ -16,6 +16,6 @@ extension Money {
 
 extension Double {
     var rrFormatted: String {
-        return self < 0 ? "": "+" + self.thousandsFormatting + " Р₽"
+        return self.thousandsFormatting + " Р₽"
     }
 }

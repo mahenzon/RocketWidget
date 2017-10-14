@@ -36,7 +36,7 @@ class OperationViewController: NSViewController {
                 rocketRublesAmountLabel.isHidden = true
             } else {
                 rocketRublesAmountLabel.isHidden = false
-                rocketRublesAmountLabel.stringValue = operation.rocketRubles.rrFormatted
+                rocketRublesAmountLabel.stringValue = operation.rocketRubles < 0 ? "": "+" + operation.rocketRubles.rrFormatted
             }
             if let comment = operation.comment {
                 commentLabel.isHidden = false
