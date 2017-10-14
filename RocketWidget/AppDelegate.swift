@@ -55,19 +55,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: NSImage.Name("statusBarArrow"))
             button.action = #selector(togglePopover(_:))
         }
-        popover.contentViewController = ViewController.freshController()
-        
+        popover.contentViewController = RocketWidget.shared.freshController()
+
         // force subscribing it on Notifications
         showPopover(sender: nil)
         closePopover(sender: nil)
-        
+
         eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
             if let strongSelf = self, strongSelf.popover.isShown, strongSelf.prefs.hideStatusBarMenu {
                 strongSelf.closePopover(sender: event)
             }
         }
     }
-    
+
     @objc func togglePopover(_ sender: Any?) {
         if popover.isShown {
             closePopover(sender: sender)

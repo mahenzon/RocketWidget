@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    func truncate(length: Int, trailing: String = "...") -> String {
+    func truncate(length: Int = 25, trailing: String = "...") -> String {
         if self.characters.count > length {
             return String(self.characters.prefix(length)) + trailing
         } else {

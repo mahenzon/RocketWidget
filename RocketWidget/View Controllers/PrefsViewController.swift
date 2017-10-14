@@ -18,9 +18,11 @@ class PrefsViewController: NSViewController {
     @IBOutlet weak var hideFromDockWhenWindowClosedCheck: NSButton!
     
     @IBAction func cancelButtonClicked(_ sender: Any) {
+        NSApp.abortModal()
         view.window?.close()
     }
     @IBAction func okButtonClicked(_ sender: Any) {
+        NSApp.abortModal()
         saveNewPrefs()
         view.window?.close()
     }
@@ -32,8 +34,13 @@ class PrefsViewController: NSViewController {
         showExistingPrefs()
     }
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        if let window = self.view.window {
+            NSApp.runModal(for: window)
+        }
+    }
 }
-
 
 extension PrefsViewController {
     // MARK: - Display

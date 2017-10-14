@@ -14,7 +14,7 @@ struct Coordinate: Decodable {
     var acc: Double?
 }
 
-struct MoneySpent: Decodable {
+struct Money: Decodable {
     var amount: Double
     var currency: String
     
@@ -64,7 +64,7 @@ struct RocketOperation: Decodable {
     var friend: RocketFriend?
     var rocketRubles: Double
     var date: Int
-    var money: MoneySpent
+    var money: Money
     var category: MerchantCategory
     var merchant: Merchant
     var location: Coordinate

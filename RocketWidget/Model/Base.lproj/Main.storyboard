@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -26,7 +27,7 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="tmt-1L-Gk0" kind="show" id="Zr3-uG-FLT"/>
+                                                <segue destination="tmt-1L-Gk0" kind="show" id="W51-vK-u49"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -118,9 +119,11 @@
             <objects>
                 <windowController id="tmt-1L-Gk0" sceneMemberID="viewController">
                     <window key="window" title="Настройки" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dnQ-CE-Ffb">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <windowStyleMask key="styleMask" titled="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="399" height="241"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <value key="minSize" type="size" width="399" height="241"/>
+                        <value key="maxSize" type="size" width="399" height="241"/>
                         <connections>
                             <outlet property="delegate" destination="tmt-1L-Gk0" id="v22-Gx-mVd"/>
                         </connections>
@@ -133,11 +136,148 @@
             </objects>
             <point key="canvasLocation" x="624" y="224"/>
         </scene>
+        <!--Operation View Controller-->
+        <scene sceneID="Ko2-cr-SUi">
+            <objects>
+                <customObject id="M9y-Ht-hWu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="OperationView" id="Xcw-M5-5Xg" customClass="OperationViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="VJY-qb-njH">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="228"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfa-DC-aYv">
+                                <rect key="frame" x="16" y="11" width="283" height="205"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gte-qg-odj">
+                                        <rect key="frame" x="-2" y="183" width="137" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Operation Name" id="wA2-1g-QDW">
+                                            <font key="font" metaFont="system" size="18"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ybP-9E-71s">
+                                        <rect key="frame" x="-2" y="156" width="71" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Category" id="IHC-eq-Hg8">
+                                            <font key="font" metaFont="system" size="16"/>
+                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-wZ-6ej" userLabel="Spacer">
+                                        <rect key="frame" x="-2" y="146" width="287" height="2"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="l7B-Q5-NVI">
+                                            <font key="font" metaFont="system" size="1"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lkz-MN-6Gm">
+                                        <rect key="frame" x="-2" y="117" width="287" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Money amount" id="Xfh-gP-6s9">
+                                            <font key="font" metaFont="system" size="17"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="coL-tN-zPO">
+                                        <rect key="frame" x="-2" y="90" width="98" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RocketRubles" id="kR1-xA-W1q">
+                                            <font key="font" metaFont="system" size="15"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wQg-5G-dqQ" userLabel="Spacer">
+                                        <rect key="frame" x="-2" y="80" width="54" height="2"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="qSk-Fa-OfG">
+                                            <font key="font" metaFont="system" size="1"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="dWv-Jn-EMr">
+                                        <rect key="frame" x="-2" y="53" width="287" height="19"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Comment:" allowsEditingTextAttributes="YES" id="0Qi-LR-Pu0">
+                                            <font key="font" metaFont="system" size="16"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uoP-Sx-GwL">
+                                        <rect key="frame" x="-2" y="26" width="287" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="VXg-2E-fsg">
+                                            <font key="font" metaFont="system" size="15"/>
+                                            <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fWF-OG-PKK" customClass="HyperTextField" customModule="RocketWidget" customModuleProvider="target">
+                                        <rect key="frame" x="-2" y="0.0" width="287" height="18"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Квитанция" allowsEditingTextAttributes="YES" id="4jE-bW-9gh">
+                                            <font key="font" metaFont="system" size="14"/>
+                                            <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dWv-Jn-EMr" firstAttribute="width" secondItem="Hfa-DC-aYv" secondAttribute="width" id="0XM-em-fd4"/>
+                                    <constraint firstItem="fWF-OG-PKK" firstAttribute="width" secondItem="Hfa-DC-aYv" secondAttribute="width" id="2oR-MY-jry"/>
+                                    <constraint firstItem="lkz-MN-6Gm" firstAttribute="width" secondItem="Hfa-DC-aYv" secondAttribute="width" id="GpL-Ar-Oua"/>
+                                    <constraint firstItem="vmi-wZ-6ej" firstAttribute="width" secondItem="Hfa-DC-aYv" secondAttribute="width" id="Vf8-zm-2RW"/>
+                                    <constraint firstItem="uoP-Sx-GwL" firstAttribute="width" secondItem="Hfa-DC-aYv" secondAttribute="width" id="tMh-e4-Xo8"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Hfa-DC-aYv" firstAttribute="centerY" secondItem="VJY-qb-njH" secondAttribute="centerY" id="2Xa-Gc-QjN"/>
+                            <constraint firstItem="Hfa-DC-aYv" firstAttribute="width" secondItem="VJY-qb-njH" secondAttribute="width" multiplier="0.9" id="6pf-jY-Wea"/>
+                            <constraint firstItem="Hfa-DC-aYv" firstAttribute="height" secondItem="VJY-qb-njH" secondAttribute="height" multiplier="0.9" id="Roo-Ih-lxc"/>
+                            <constraint firstItem="Hfa-DC-aYv" firstAttribute="centerX" secondItem="VJY-qb-njH" secondAttribute="centerX" id="uNA-wq-WLq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="ybP-9E-71s" id="lbQ-f6-1P7"/>
+                        <outlet property="commentLabel" destination="dWv-Jn-EMr" id="zUi-Oz-rWk"/>
+                        <outlet property="dateTimeLabel" destination="uoP-Sx-GwL" id="GQc-nO-nNW"/>
+                        <outlet property="mainStackView" destination="Hfa-DC-aYv" id="OQN-mx-hOo"/>
+                        <outlet property="moneyAmountLabel" destination="Xfh-gP-6s9" id="nKH-Sw-sLi"/>
+                        <outlet property="operationNameLabel" destination="gte-qg-odj" id="7PZ-00-LYw"/>
+                        <outlet property="receiptLabel" destination="fWF-OG-PKK" id="K0C-Ge-2R6"/>
+                        <outlet property="rocketRublesAmountLabel" destination="coL-tN-zPO" id="5K3-5r-GZR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="76" y="1084"/>
+        </scene>
         <!--Prefs View Controller-->
         <scene sceneID="Ozh-j8-MKB">
             <objects>
-                <viewController id="SM6-v8-kxU" customClass="PrefsViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="UsG-1S-hSt">
+                <viewController storyboardIdentifier="PreferencesViewController" id="SM6-v8-kxU" customClass="PrefsViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" id="UsG-1S-hSt">
                         <rect key="frame" x="0.0" y="0.0" width="399" height="241"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -230,13 +370,13 @@ DQ
                 </viewController>
                 <customObject id="BBg-NO-026" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583.5" y="690.5"/>
+            <point key="canvasLocation" x="623.5" y="631.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="CustomView" customModule="RocketWidget" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="460" height="289"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>

@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    var html2AttributedString: NSAttributedString {
+    var htmlToAttributedString: NSAttributedString {
         return try! NSAttributedString(data: Data(utf8),
                                        options: [.documentType: NSAttributedString.DocumentType.html,
                                                  .characterEncoding: String.Encoding.utf8.rawValue],
