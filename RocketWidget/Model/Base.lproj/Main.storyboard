@@ -141,14 +141,14 @@
             <objects>
                 <viewController storyboardIdentifier="OperationView" id="i8U-tK-VCu" customClass="OperationViewController" customModule="RocketWidget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="skE-kH-s4t">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="228"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="459"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLw-fy-M5r">
-                                <rect key="frame" x="16" y="11" width="283" height="205"/>
+                                <rect key="frame" x="16" y="23" width="283" height="413"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WsW-ra-1td">
-                                        <rect key="frame" x="-2" y="183" width="287" height="22"/>
+                                        <rect key="frame" x="-2" y="391" width="287" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Operation Name" id="6j0-DI-eha">
                                             <font key="font" metaFont="system" size="18"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -156,7 +156,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5hZ-EH-AHQ">
-                                        <rect key="frame" x="-2" y="156" width="287" height="19"/>
+                                        <rect key="frame" x="-2" y="364" width="287" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Category" id="d9P-Oh-sH9">
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -164,7 +164,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WCP-f9-keN" userLabel="Spacer">
-                                        <rect key="frame" x="-2" y="146" width="287" height="2"/>
+                                        <rect key="frame" x="-2" y="354" width="287" height="2"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="jn4-9v-qWs">
                                             <font key="font" metaFont="system" size="1"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -172,7 +172,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jzO-wC-Ay1">
-                                        <rect key="frame" x="-2" y="117" width="287" height="21"/>
+                                        <rect key="frame" x="-2" y="325" width="287" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Money amount" id="hdF-5f-eRh">
                                             <font key="font" metaFont="system" size="17"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -180,7 +180,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mfC-w6-twE">
-                                        <rect key="frame" x="-2" y="90" width="287" height="19"/>
+                                        <rect key="frame" x="-2" y="298" width="287" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RocketRubles" id="DfH-J6-2ZG">
                                             <font key="font" metaFont="system" size="15"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -188,7 +188,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-ka-xMf" userLabel="Spacer">
-                                        <rect key="frame" x="-2" y="80" width="287" height="2"/>
+                                        <rect key="frame" x="-2" y="288" width="287" height="2"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="TsX-xL-to9">
                                             <font key="font" metaFont="system" size="1"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -196,7 +196,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Qbf-rf-pPY">
-                                        <rect key="frame" x="-2" y="53" width="287" height="19"/>
+                                        <rect key="frame" x="-2" y="261" width="287" height="19"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Comment:" allowsEditingTextAttributes="YES" id="zFs-Jm-mM2">
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -204,7 +204,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yV0-AY-rml">
-                                        <rect key="frame" x="-2" y="26" width="287" height="19"/>
+                                        <rect key="frame" x="-2" y="234" width="287" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="time, date" id="5B7-EC-hOz">
                                             <font key="font" metaFont="system" size="15"/>
                                             <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -212,13 +212,19 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uUJ-VX-5EL" customClass="HyperTextField" customModule="RocketWidget" customModuleProvider="target">
-                                        <rect key="frame" x="-2" y="0.0" width="287" height="18"/>
+                                        <rect key="frame" x="-2" y="208" width="287" height="18"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Квитанция" allowsEditingTextAttributes="YES" id="G6i-Pc-4Cq">
                                             <font key="font" metaFont="system" size="14"/>
                                             <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIe-Np-HaQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="ACd-xU-P7F"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="WsW-ra-1td" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="13j-Yb-sc0"/>
@@ -228,10 +234,12 @@
                                     <constraint firstItem="Qbf-rf-pPY" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="bnK-5o-tXh"/>
                                     <constraint firstItem="yV0-AY-rml" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="eX7-5B-ZuA"/>
                                     <constraint firstItem="uUJ-VX-5EL" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="ep7-f1-aCq"/>
+                                    <constraint firstItem="qIe-Np-HaQ" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="oZy-gL-ywW"/>
                                     <constraint firstItem="jzO-wC-Ay1" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="rzI-1i-q8e"/>
                                     <constraint firstItem="XXK-ka-xMf" firstAttribute="width" secondItem="zLw-fy-M5r" secondAttribute="width" id="zQH-pN-g0l"/>
                                 </constraints>
                                 <visibilityPriorities>
+                                    <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -252,10 +260,11 @@
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwf-p7-G3K" userLabel="Spacer">
-                                <rect key="frame" x="-45" y="215" width="404" height="2"/>
+                                <rect key="frame" x="-45" y="446" width="404" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="3AW-KN-2xy">
                                     <font key="font" metaFont="system" size="1"/>
@@ -272,6 +281,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomStackView" destination="qIe-Np-HaQ" id="TP5-7E-7RH"/>
                         <outlet property="categoryLabel" destination="5hZ-EH-AHQ" id="kyh-H1-yQh"/>
                         <outlet property="commentLabel" destination="Qbf-rf-pPY" id="WRi-YN-fgP"/>
                         <outlet property="dateTimeLabel" destination="yV0-AY-rml" id="mDu-DE-4ec"/>
@@ -284,7 +294,7 @@
                 </viewController>
                 <customObject id="87R-hS-Yyy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="1086"/>
+            <point key="canvasLocation" x="75" y="1204"/>
         </scene>
         <!--Prefs View Controller-->
         <scene sceneID="Ozh-j8-MKB">

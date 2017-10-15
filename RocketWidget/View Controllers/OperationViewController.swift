@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import MapKit
 
 class OperationViewController: NSViewController {
     
@@ -20,12 +21,21 @@ class OperationViewController: NSViewController {
     @IBOutlet weak var commentLabel: NSTextField!
     @IBOutlet weak var dateTimeLabel: NSTextField!
     @IBOutlet weak var receiptLabel: HyperTextField!
+    @IBOutlet weak var bottomStackView: NSStackView!
     
+    let mapView = MKMapView()
+
     var operation: RocketOperation?
 
-    override func viewWillAppear() {
-        super.viewWillAppear()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        mapView.setRegion(MapPin.defaultRegion, animated: true)
+        bottomStackView.translatesAutoresizingMaskIntoConstraints = true
+        bottomStackView.addView(mapView, in: .top)
+        bottomStackView.layoutSubtreeIfNeeded()
+        bottomStackView.isHidden = true
     }
+
     override func viewDidAppear() {
         super.viewDidAppear()
         if let operation = operation {
@@ -47,6 +57,18 @@ class OperationViewController: NSViewController {
             }
             dateTimeLabel.stringValue = operation.date.mediumTimeFormatting
             receiptLabel.href = operation.receipt
+            mainStackView.layout()
+            
+            if let lat = operation.location.latitude, let lon = operation.location.longitude {
+                let coord = CLLocationCoordinate2DMake(lat, lon)
+                let annotation = MapPin(title: operation.name, subtitle: operation.category.name, coordinate: coord)
+                mapView.addAnnotation(annotation)
+                mapView.setRegion(MKCoordinateRegionMakeWithDistance(coord, MapPin.radius, MapPin.radius), animated: true)
+                bottomStackView.isHidden = false
+            }
+            else {
+                bottomStackView.isHidden = true
+            }
         }
     }
 }

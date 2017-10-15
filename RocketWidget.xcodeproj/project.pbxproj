@@ -34,6 +34,7 @@
 		16AB1E671F8FD37700E73380 /* OperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AB1E661F8FD37700E73380 /* OperationViewController.swift */; };
 		16ACC2401F8A11170097EF09 /* StringTruncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ACC23F1F8A11160097EF09 /* StringTruncate.swift */; };
 		16B7AE0D1F8AAA2900E84C42 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7AE0C1F8AAA2800E84C42 /* EventMonitor.swift */; };
+		16F6DDDE1F93944A00B05D47 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F6DDDD1F93944A00B05D47 /* MapPin.swift */; };
 		16F8F0281F8A3E6A005EB978 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */; };
 		16F8F02A1F8A4658005EB978 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F0291F8A4658005EB978 /* Preferences.swift */; };
 		16F8F02C1F8A5C15005EB978 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8F02B1F8A5C15005EB978 /* NotificationNames.swift */; };
@@ -70,6 +71,7 @@
 		16AB1E661F8FD37700E73380 /* OperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewController.swift; sourceTree = "<group>"; };
 		16ACC23F1F8A11160097EF09 /* StringTruncate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTruncate.swift; sourceTree = "<group>"; };
 		16B7AE0C1F8AAA2800E84C42 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		16F6DDDD1F93944A00B05D47 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		16F8F0271F8A3E6A005EB978 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
 		16F8F0291F8A4658005EB978 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		16F8F02B1F8A5C15005EB978 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				16B7AE0C1F8AAA2800E84C42 /* EventMonitor.swift */,
+				16F6DDDD1F93944A00B05D47 /* MapPin.swift */,
 				160698C21F80E40600C98ED1 /* RocketWidget.swift */,
 				160698EA1F812A6E00C98ED1 /* SwiftMD5.swift */,
 				160698E21F8125FF00C98ED1 /* Data Managers */,
@@ -304,6 +307,7 @@
 				16626E791F8165460024EC6E /* ImageManager.swift in Sources */,
 				160698C11F80E32700C98ED1 /* UserConfigJSONModel.swift in Sources */,
 				160698BE1F80DE5F00C98ED1 /* UserConfiguration.swift in Sources */,
+				16F6DDDE1F93944A00B05D47 /* MapPin.swift in Sources */,
 				16626E731F814BB50024EC6E /* IntTimeFormatting.swift in Sources */,
 				160698EE1F812B0F00C98ED1 /* StringMD5.swift in Sources */,
 				165E179B1F80038E00A29319 /* ViewController.swift in Sources */,
