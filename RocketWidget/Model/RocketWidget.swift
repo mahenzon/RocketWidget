@@ -17,6 +17,14 @@ class RocketWidget {
 
     var widgetCache: Widget?
 
+    func createAlert(withMessage message: String, informativeText text: String, style: NSAlert.Style = .warning) -> NSAlert {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.informativeText = text
+        alert.alertStyle = style
+        return alert
+    }
+
     func loadUserConfig() -> ConfigImportResult {
         let dialog = NSOpenPanel()
         dialog.title = "Выберите конфигурационный файл"
